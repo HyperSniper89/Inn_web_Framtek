@@ -39,6 +39,21 @@ client.connect()
         }
     });
 
+    // Delete an employee
+    app.delete('/api/employees/:id', async (req, res) => {
+        const id = req.params.id;
+        const {ObjectId} = require('mongodb');
+        const result = await employeesCollection.deleteOne({_id: ObjectId(id)});
+
+        if (result.deletedCount === 1) {
+            res.sendStatus(200);
+        } else {
+            res.sendStatus(500);
+        }
+    });
+
+
+
     app.use(express.static('public'));
     // Start the server
     app.listen(PORT, () => {
