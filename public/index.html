@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framtek - KT Konsultering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>IT Consultant Business</h1>
+</header>
+
+<section id="employee-form">
+    <h2>Add an employee profile</h2>
+    <form id="add-employee-form">
+        <label for="employee-name">Name:</label>
+        <input type="text" id="employee-name" name="name" required>
+
+        <label for="employee-role">Role:</label>
+        <input type="text" id="employee-role" name="role" required>
+
+        <label for="employee-bio">Biography:</label>
+        <textarea id="employee-bio" name="bio" rows="4" required></textarea>
+
+        <button type="submit">Add Employee</button>
+    </form>
+</section>
+
+<section id="employees">
+    <h2>Meet our team</h2>
+    <div id="employee-list"></div>
+</section>
+
+<script src="scripts.js"></script>
+</body>
+</html>
