@@ -58,29 +58,38 @@ section {
     Styling - employee profilar
  */
 .employee-profile {
-    border: 1px solid #333; /* Ger border runt um employee profilar */
-    padding: 1rem; /* Ger padding hjá employee profilar */
-    margin-bottom: 1rem; /* Ger bottom margin til employee profilar */
-    background-color: #fff; /* Setur bakgrund lit á employee profilar */
-    position: relative; /* Setur position til relative */
+    width: 70%; /* Setur breidd á employee profilar*/
+    margin: 0 auto; /* Centrera employee profilar*/
+    box-sizing: border-box; /* Setur box-sizing model at innihalda padding og border*/
+    padding: 20px; /* Ger padding til employee profilar*/
+    display: flex; /* Sýnur employee profilar í ein flex container*/
+    flex-direction: column; /* Sýnur employee profilar í ein column*/
+    align-items: center; /* Centrerar employee profilar*/
+    border: 1px solid #ccc; /* Setur border á employee profilar*/
+    border-radius: 5px; /* Ger avrundaði horn á employee profilar*/
+    background-color: #f9f9f9; /* Setur bakgrund lit á employee profil*/
+    margin-bottom: 20px; /* Ger bottom margin hjá employee profilar*/
     animation: fadeIn 1s ease-in-out; /* Ger fadeIn animation */
 }
 
 .employee-profile h3 {
-    font-size: 1.5rem; /* Setur font size fyri employee name */
-    margin-bottom: 0.5rem; /* Ger bottom margin hjá employee name */
+    font-size: 24px; /* Setur font size fyri employee name */
+    margin-bottom: 5px; /* Ger bottom margin hjá employee name */
+ /*   font-size: 1.5rem;
+    margin-bottom: 0.5rem; */
 }
 
 .employee-profile p {
-    margin-bottom: 0.5rem; /* Ger bottom margin hjá employee title */
+    margin-bottom: 5px; /* Ger bottom margin hjá employee title */
 }
 
 .profile-image {
     width: 100px;
     height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+    border-radius: 50%; /* Border-radius 50% ger at myndin verður ein circle*/
+    object-fit: cover; /* Ger at myndin passar í containerin*/
+    margin-bottom: 10px; /* Ger bottom margin hjá employee mynd*/
+    animation: fadeIn 1s ease-in-out; /* Ger fadeIn animation */
 }
 
 /*
