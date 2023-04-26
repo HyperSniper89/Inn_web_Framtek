@@ -53,7 +53,7 @@ function renderEmployees(employees) {
     });
 }
 
-// Handfara employee form submission
+// Handterar employee form submission
 async function handleEmployeeFormSubmit(e) {
     // forða default form submission
     e.preventDefault();
@@ -77,7 +77,7 @@ async function handleEmployeeFormSubmit(e) {
 }
 
 
-// Handfara delete employee button click
+// Handterar delete employee button click
 async function handleDeleteEmployee(e) {
     // Heinta employee id frá delete button
     const employeeId = e.target.dataset.id;
@@ -93,7 +93,7 @@ async function handleDeleteEmployee(e) {
     }
 }
 
-// Senda employee id til API fyri at sletta employee
+// Sends employee id til API fyri at sletta employee
 async function deleteEmployeeData(employeeId) {
     // Senda DELETE request til API
     const response = await fetch(`/api/employees/${employeeId}`, {

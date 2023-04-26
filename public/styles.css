@@ -18,6 +18,15 @@ body {
 }
 
 /*
+    Styling - logo
+ */
+.logo {
+    width: 150px; /* Adjust this value to your desired logo width */
+    height: auto; /* This will maintain the aspect ratio of the image */
+}
+
+
+/*
     Styling - navigation bar
  */
 header nav ul {
@@ -25,6 +34,7 @@ header nav ul {
     display: flex; /* sýnur list items í ein flex container */
     justify-content: center; /* Centrera list items horizontalt */
 }
+
 
 header nav ul li {
     margin-right: 1rem; /* Setur høgru margin til at seperera list items */
@@ -48,6 +58,53 @@ header {
     color: #fff; /* Setur text cil á header */
     text-align: center; /* Centrera header innihald */
     padding: 1rem; /* Ger padding á header */
+}
+
+/*
+    Styling - projects table
+ */
+.projects {
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.projects-table thead {
+    background-color: #333;
+    color: #fff;
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border: 1px solid #333;
+}
+
+.projects-table th {
+    font-weight: bold;
+}
+
+.projects-table tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.projects-table tbody tr:hover {
+    background-color: #dcdcdc;
+    cursor: pointer;
 }
 
 section {
@@ -75,8 +132,6 @@ section {
 .employee-profile h3 {
     font-size: 24px; /* Setur font size fyri employee name */
     margin-bottom: 5px; /* Ger bottom margin hjá employee name */
- /*   font-size: 1.5rem;
-    margin-bottom: 0.5rem; */
 }
 
 .employee-profile p {

@@ -34,7 +34,7 @@ client.connect()
         res.send(employees);
     });
 
-        // Ger eitt nýtt employee object
+        // handferð POST request til at gera til nýggjan employee
         app.post('/api/employees', async (req, res) => {
             // Setur employee object frá request body
             const employee = req.body;
