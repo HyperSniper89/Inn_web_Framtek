@@ -1,113 +1,126 @@
+/*
+    Global styling fyri alt dokumentið
+ */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Setur box-sizing model at innihalda padding og border */
+    margin: 0; /* setur default margin til 0 */
+    padding: 0; /* setur default padding til 0 */
 }
 
+/*
+    Basic styling á body element
+ */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(to right, #f8f8f8, #dcdcdc);
+    font-family: Arial, sans-serif; /* Seta font family hjá body */
+    line-height: 1.6; /* Setur line hædd */
+    color: #333; /* Setur text color */
+    background: linear-gradient(to right, #f8f8f8, #dcdcdc); /* Setur linear gradientin av bakgrund */
 }
-
 
 /*
     Styling - navigation bar
  */
 header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+    list-style: none; /* fjernar default list styling */
+    display: flex; /* sýnur list items í ein flex container */
+    justify-content: center; /* Centrera list items horizontalt */
 }
 
 header nav ul li {
-    margin-right: 1rem;
+    margin-right: 1rem; /* Setur høgru margin til at seperera list items */
 }
 
 header nav ul li:last-child {
-    margin-right: 0;
+    margin-right: 0; /* Fjernar høgru margin frá síðsta list item */
 }
 
 header nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    color: #fff; /* Setur text lit fyri nav links */
+    text-decoration: none; /* fjernar default underline */
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Ger ein underline tá ið vit halda músina yvir nav links */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
+    background-color: #333; /* Setur bakgrund lit á header */
+    color: #fff; /* Setur text cil á header */
+    text-align: center; /* Centrera header innihald */
+    padding: 1rem; /* Ger padding á header */
 }
 
 section {
-    padding: 1rem;
+    padding: 1rem; /* Ger padding til sections */
 }
 
+/*
+    Styling - employee profilar
+ */
 .employee-profile {
-    border: 1px solid #333;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background-color: #fff;
-    position: relative;
-    animation: fadeIn 1s ease-in-out;
+    border: 1px solid #333; /* Ger border runt um employee profilar */
+    padding: 1rem; /* Ger padding hjá employee profilar */
+    margin-bottom: 1rem; /* Ger bottom margin til employee profilar */
+    background-color: #fff; /* Setur bakgrund lit á employee profilar */
+    position: relative; /* Setur position til relative */
+    animation: fadeIn 1s ease-in-out; /* Ger fadeIn animation */
 }
 
 .employee-profile h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem; /* Setur font size fyri employee name */
+    margin-bottom: 0.5rem; /* Ger bottom margin hjá employee name */
 }
 
 .employee-profile p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem; /* Ger bottom margin hjá employee title */
 }
 
+.profile-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/*
+    Keyframes fyri fadeIn animation
+ */
 @keyframes fadeIn {
     0% {
-        opacity: 0;
-        transform: translateY(20px);
+        opacity: 0; /* Setur byrjanar opacity til 0 */
+        transform: translateY(20px); /* Setur byrjanar positión til 20px */
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* Setur enda opacity til 1 */
+        transform: translateY(0); /* Setur enda vertikala positión til 0 */
     }
 }
 
+/*
+    Styling - form elements
+ */
 form {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Setur bakgrund lit á form */
+    padding: 2rem; /* Ger padding til form */
+    border-radius: 5px; /* Ger avrundaði horn á form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);} /* Ger box skugga á form */
+
+#add-employee-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-form input[type="text"],
-form textarea {
+#submit-button {
     width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-}
-
-form button {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
     border: none;
-    border-radius: 5px;
-}
-
-form button:hover {
-    background-color: #555;
+    border-radius: 4px;
+    cursor: pointer;
 }

@@ -1,29 +1,60 @@
+<!--Definera document typu-->
 <!DOCTYPE html>
+
+<!--Seta málið til at verða enskt-->
 <html lang="en">
+
 <head>
+    <!--Definera character encoding fyri document-->
     <meta charset="UTF-8">
+
+    <!-- Seta viewport fyri responsivt design, scalera innihald til eindina-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Tittul-->
     <title>Framtek - KT Konsultering</title>
+
+    <!--Link til eksternt css stylesheet-->
     <link rel="stylesheet" href="styles.css">
 </head>
+
+<!--Her byrjar body-->
 <body>
+
+<!--headarin í inniheldur navbar-->
 <header>
     <h1>Framtek - IT Consulting</h1>
+       <!--Navbar-->
     <nav>
+        <!--ul - unordered list, møguliga broyra til ordered-->
         <ul>
+            <!--Listi við navbar links  -->
             <li><a href="#employee-form">Add Employee</a></li>
             <li><a href="#employees">Meet Our Team</a></li>
         </ul>
     </nav>
 </header>
 
+<!--nested browsing element har vit hava vælkomst video sum er eitt embedded youtube link í løtuni-->
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/GxhBOV3aI80" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+
+<!--Section sum vísur allar employee profilar -->
+<section id="employees">
+    <h2>Meet our team</h2>
+    <!--div sum dynamiskt fyllir okkara employee profilar-->
+    <div id="employee-list"></div>
+</section>
+
+<!-- Sectión at at gera nýggjar employee profilar -->
 <section id="employee-form">
+    <!--subheading-->
     <h2>Add an employee profile</h2>
+    <!-- Form element í samlar information til nýggjar employee profilar -->
     <form id="add-employee-form">
+
         <label for="employee-name">Name:</label>
+        <!--required attributtur ið krevur at her skal vera eitt navn, role osfr.-->
         <input type="text" id="employee-name" name="name" required>
 
         <label for="employee-role">Role:</label>
@@ -32,18 +63,16 @@
         <label for="employee-bio">Biography:</label>
         <textarea id="employee-bio" name="bio" rows="4" required></textarea>
 
+        <!-- Broyta til at vit eisini kunnu uploada lokalar myndir -->
         <label for="employee-image">Image URL:</label>
         <input type="url" id="employee-image" name="image" value="https://static.vecteezy.com/system/resources/thumbnails/001/840/618/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg">
 
+        <!--submit button-->
         <button type="submit">Add Employee</button>
     </form>
 </section>
 
-<section id="employees">
-    <h2>Meet our team</h2>
-    <div id="employee-list"></div>
-</section>
-
+<!--Link til ekterna javascript fílu-->
 <script src="scripts.js"></script>
 </body>
 </html>
